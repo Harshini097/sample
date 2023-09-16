@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "d899a159-ad06-4531-86dd-d382fd34ed5c",
+		"name": "GET collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"id": "0ae53306-e63e-4555-ac48-04aead33a5cc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products?limit=5",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_https://fakestoreapi.com/products",
+			"id": "71bbba54-5ea8-4cb5-b868-dfd62c08c7ed",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 22,\r\n        \"title\": \"Mens Casual Premium Slim Fit T-Shirts \",\r\n        \"price\": 72.3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://fakestoreapi.com/products"
+			},
+			"response": []
+		},
+		{
+			"name": "basic auth",
+			"id": "66a46162-b9d3-45bb-9f5b-b0880d94bb12",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": {
+						"disableRetryRequest": true,
+						"password": "{{password}}",
+						"username": "{{username}}",
+						"algorithm": "MD5"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://postman-echo.com/digest-auth"
+			},
+			"response": []
+		}
+	]
+}
